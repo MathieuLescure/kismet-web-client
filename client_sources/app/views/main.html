@@ -1,0 +1,27 @@
+<header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+  <div>  
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        <div id='connectionStatus' title="{{connectionStatus}}" ng-class="{'btn-danger': connectionStatus=='disconnected', 'btn-warning': connectionStatus=='connecting', 'btn-success': connectionStatus=='connected'}"></div>
+        <div id='kismetServerConnectionStatus' title="Not connected to Kismet Server" ng-show="connectionStatus=='connected' && kismetServerConnectionStatus=='disconnected'" class="btn-danger"></div>
+      </div>
+    </div>
+    <div class="navbar-header navbar-right">
+      <div class="navbar-brand">
+        Kismet Web Client
+      </div>
+    </div>
+  </div>
+</header>
+
+<div role="main" id="main" class="fill" >
+  <div id="panel1">
+    <div class="grid-toolbar">BSSID messages</div>
+    <div class="data-grid fill" ng-grid="bssidGridOptions"></div>
+  </div>
+  <div class="splitter" splitter></div>
+  <div id="panel2">
+    <div class="grid-toolbar">CLIENT messages</div>
+    <div  class="data-grid fill" ng-grid="clientGridOptions"></div>
+  </div>
+</div>
