@@ -1,7 +1,7 @@
 kismet-web-client
 =================
 
-A very basic web client for Kismet Server
+A very basic web client for Kismet Server. More info on my [blog](http://blog.silic.io/blog/2013/09/28/kismet-web-client)
 
 # Installation
 
